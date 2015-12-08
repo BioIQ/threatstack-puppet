@@ -11,7 +11,8 @@ class threatstack(
   $deploy_key   = 'none',
   $ruleset = ['Base Rule Set'],
   $ts_package   = 'threatstack-agent',
-  $ts_hostname  = $fqdn
+  $ts_hostname  = $fqdn,
+  $ensure = 'installed',
 ) {
   if $deploy_key == 'none' {
     fail('deploy_key must be defined.')

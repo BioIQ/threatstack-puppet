@@ -14,7 +14,7 @@ class threatstack::yum {
   }
 
   package { $threatstack::ts_package:
-    ensure  => installed,
+    ensure  => $threatstack::ensure,
     require => [ Yumrepo['threatstack'] ]
   }
 }
